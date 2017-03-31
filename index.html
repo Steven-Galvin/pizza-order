@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pete Sau's Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Pete Sau's Pizza</h1>
+      </div>
+
+      <div class="form-group" id="personalInfo">
+        <h4>Personal Info:</h4>
+        <br>
+        <label for="userName">Name:</label>
+        <input type="text" id="userName" class="form-control">
+        <label for="userStreet">Street:</label>
+        <input type="text" id="userStreet" class="form-control">
+        <label for="userCity">City:</label>
+        <input type="text" id="userCity" class="form-control">
+        <label for="userState">State</label>
+        <select id="exampleSelect1" class="form-control">
+          <option>AL</option>
+        	<option>AK</option>
+        	<option>AZ</option>
+        	<option>AR</option>
+        	<option>CA</option>
+        	<option>CO</option>
+        	<option>CT</option>
+        	<option>DE</option>
+        	<option>FL</option>
+        	<option>GA</option>
+        	<option>HI</option>
+        	<option>ID</option>
+        	<option>IL</option>
+        	<option>IN</option>
+        	<option>IA</option>
+        	<option>KS</option>
+        	<option>KY</option>
+        	<option>LA</option>
+        	<option>ME</option>
+        	<option>MD</option>
+        	<option>MA</option>
+        	<option>MI</option>
+        	<option>MN</option>
+        	<option>MS</option>
+        	<option>MO</option>
+        	<option>MT</option>
+        	<option>NE</option>
+        	<option>NV</option>
+         	<option>NH</option>
+         	<option>NJ</option>
+         	<option>NM</option>
+         	<option>NY</option>
+         	<option>NC</option>
+         	<option>ND</option>
+        	<option>OH</option>
+        	<option>OK</option>
+        	<option>OR</option>
+        	<option>PA</option>
+         	<option>RI</option>
+         	<option>SC</option>
+         	<option>SD</option>
+        	<option>TN</option>
+        	<option>TX</option>
+        	<option>UT</option>
+        	<option>VT</option>
+        	<option>VA</option>
+        	<option>WA</option>
+         	<option>WV</option>
+        	<option>WI</option>
+        	<option>WY</option>
+        </select>
+        <label for="userZipcode">Zipcode:</label>
+        <input type="text" id="userZipcode" class="form-control">
+      </div>
+
+      <div class="form-check" id="size">
+        <h4>Pick a Pizza Size:</h4>
+        <br>
+        <label>
+          <input type="radio" name="pizzaSize" checked>
+          Small - 7''
+        </label>
+        <br>
+        <br>
+        <label>
+          <input type="radio" name="pizzaSize">
+          Medium - 9''
+        </label>
+        <br>
+        <br>
+        <label>
+          <input type="radio" name="pizzaSize">
+          Large - 11''
+        </label>
+      </div>
+
+      <div class="form-check" id="toppings">
+        <h4>Toppings:</h4>
+        <br>
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Meats</h5>
+            <label>
+              <input type="checkbox">
+              Bacon
+            </label>
+            <br>
+            <label>
+              <input type="checkbox">
+              Pepperoni
+            </label>
+            <br>
+            <label>
+              <input type="checkbox">
+              Salami
+            </label>
+            <br>
+            <label>
+              <input type="checkbox">
+              Sausage
+            </label>
+            <br>
+            <label>
+              <input type="checkbox">
+              Canadian Bacon
+            </label>
+            <br>
+            <label>
+              <input type="checkbox">
+              Ground Beef
+            </label>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Veggies</h5>
+            <label>
+              <input type="checkbox">
+              Mushroom
+            </label>
+            <br>
+            <label>
+              <input type="checkbox">
+              Olive
+            </label>
+            <br>
+            <label>
+              <input type="checkbox">
+              Spinach
+            </label>
+            <br>
+            <label>
+              <input type="checkbox">
+              Onion
+            </label>
+            <br>
+            <label>
+              <input type="checkbox">
+              Green Pepper
+            </label>
+            <!-- MAKE SURE TO CHECK TOPPINGS ARE CORRECT -->
+            <br>
+            <label>
+              <input type="checkbox">
+              Jalapeño Pepper
+            </label>
+            <label>
+              <input type="checkbox">
+              Jalapeño
+            </label>
+            <label>
+              <input type="checkbox">
+              Jalapeño
+            </label>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Others</h5>
+            <label>
+              <input type="checkbox">
+              Pineapple
+            </label>
+            <br>
+            <label>
+              <input type="checkbox">
+              Cheddar Cheese
+            </label>
+            <br>
+            <label>
+              <input type="checkbox">
+              Parmesan
+            </label>
+            <br>
+            <label>
+              <input type="checkbox">
+              Mozzarella
+            </label>
+            <br>
+            <label>
+              <input type="checkbox">
+              Four Cheese Blend
+            </label>
+            <br>
+            <label>
+              <input type="checkbox">
+              Ground Beef
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
