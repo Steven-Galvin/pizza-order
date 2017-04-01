@@ -96,19 +96,19 @@
                 <h4>Pick a Pizza Size:</h4>
                 <br>
                 <label>
-                  <input type="radio" name="pizzaSize" value="1" checked>
+                  <input type="radio" name="pizzaSize" value="small" checked>
                   Small - 7" ($7.00)
                 </label>
                 <br>
                 <br>
                 <label>
-                  <input type="radio" name="pizzaSize" value="2">
+                  <input type="radio" name="pizzaSize" value="medium">
                   Medium - 9" ($9.00)
                 </label>
                 <br>
                 <br>
                 <label>
-                  <input type="radio" name="pizzaSize" value="3">
+                  <input type="radio" name="pizzaSize" value="large">
                   Large - 11" ($11.00)
                 </label>
                 <br>
@@ -118,26 +118,26 @@
                 <h4>Pick a Pizza Crust:</h4>
                 <br>
                 <label>
-                  <input type="radio" name="pizzaCrust" value="1" checked>
+                  <input type="radio" name="pizzaCrust" value="regular crust" checked>
                   Regular crust (No extra charge)
                 </label>
                 <br>
                 <br>
                 <label>
-                  <input type="radio" name="pizzaCrust" value="2">
+                  <input type="radio" name="pizzaCrust" value="thin crust">
                   Thin crust ($1.00)
                 </label>
                 <br>
                 <br>
                 <label>
-                  <input type="radio" name="pizzaCrust" value="3">
+                  <input type="radio" name="pizzaCrust" value="stuffed crust">
                   Stuffed crust ($2.00)
                 </label>
               </div>
             </div>
           </div>
 
-          <div class="form-check" id="toppings">
+          <div class="form-check" id="selectToppings">
             <h4>Toppings:</h4>
             <small class="form-text text-muted">First two toppings are free. Additional toppings are a $0.25 charge each.</small>
             <br>
@@ -145,32 +145,32 @@
               <div class="col-md-4">
                 <h5>Meats</h5>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" value="bacon">
                   Bacon
                 </label>
                 <br>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" value="pepperoni">
                   Pepperoni
                 </label>
                 <br>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" value="salami">
                   Salami
                 </label>
                 <br>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" value="sausage">
                   Sausage
                 </label>
                 <br>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" value="canadian bacon">
                   Canadian Bacon
                 </label>
                 <br>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" value="ground beef">
                   Ground Beef
                 </label>
               </div>
@@ -178,32 +178,32 @@
               <div class="col-md-4">
                 <h5>Veggies</h5>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" value="mushroom">
                   Mushroom
                 </label>
                 <br>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" value="olive">
                   Olive
                 </label>
                 <br>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" value="spinach">
                   Spinach
                 </label>
                 <br>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" value="onion">
                   Onion
                 </label>
                 <br>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" value="green pepper">
                   Green Pepper
                 </label>
                 <br>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" value="pineapple">
                   Pineapple
                 </label>
               </div>
@@ -211,22 +211,22 @@
               <div class="col-md-4">
                 <h5>Cheese</h5>
                 <label>
-                  <input type="checkbox" value="1">
-                  Cheddar Cheese
+                  <input type="checkbox" name="toppings" value="cheddar">
+                  Cheddar
                 </label>
                 <br>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" name="toppings" value="parmesan">
                   Parmesan
                 </label>
                 <br>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" value="mozzarella">
                   Mozzarella
                 </label>
                 <br>
                 <label>
-                  <input type="checkbox" value="1">
+                  <input type="checkbox" name="toppings" value="four cheese blend">
                   Four Cheese Blend
                 </label>
               </div>
@@ -238,16 +238,30 @@
       </div>
 
       <div id="confirmationPage">
-        <h4>Confirm we got your order correct below:</h4>
-        <label>Size: <span id="size"></span></label>
+        <h4>That's a good looking pizza <span id="name"></span>! Just to make sure, double check to confirm we got all your info correct:</h4>
+        <label>The size of your pizza is <span id="size"></span>.</label>
         <br>
-        <label>Crust: <span id="crust"></span></label>
+        <label>You wanted <span id="crust"></span>.</label>
         <br>
-        <label>Toppings: <span id="toppings"></span></label>
+        <span id="toppings"></span>
         <br>
-        <label>Address: <span id="address"></span></label>
+        <label>Your address is <span id="address"></span>.</label>
         <br>
         <p>If it all looks good there is just one more step. Please select if you want delivery or if you want it picked up at our nearest location and hit confirm.</p>
+        <div class="row">
+          <div class="col-md-6">
+            <label>
+              <input type="radio" name="delivery" value="Delivery" checked>
+              Delivery ($1.50)
+            </label>
+          </div>
+          <div class="col-md-6">
+            <label>
+              <input type="radio" name="delivery" value="Pickup">
+              Pickup (No extra charge)
+            </label>
+          </div>
+        </div>
 
 
       </div>

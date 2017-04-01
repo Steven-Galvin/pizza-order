@@ -20,20 +20,28 @@ function Pizza(size, crust, toppings) {
 }
 
 Pizza.prototype.totalPrice = function() {
-  if (this.size === 1) {
+  if (this.size === "small") {
     this.price += 7;
-  } else if (this.size === 2) {
+  } else if (this.size === "medium") {
     this.price += 9;
   } else {
     this.price += 11;
   }
 
-  if (this.crust === 1) {
+  if (this.crust === "regular crust") {
     this.price += 0;
-  } else if (this.crust === 2) {
+  } else if (this.crust === "thin crust") {
     this.price += 1;
   } else {
-    this.price += 3;
+    this.price += 2;
+  }
+
+  if (this.toppings.length <= 2) {
+    this.price += 0;
+  } else {
+    for (var index = 0; index < this.toppings.length - 2; index++) {
+      this.price += .25;
+    }
   }
 
   return this.price;
@@ -52,12 +60,37 @@ $(document).ready(function() {
     var state = $("#userState").val();
     var zipcode = $("#userZipcode").val();
 
-    var newCustomer = new Customer(name, street, city, state, zipcode);
+    newCustomer = new Customer(name, street, city, state, zipcode);
   });
   $("div#sizeCrust").submit(function(event) {
     event.preventDefault();
-    var size = parseInt($("input:radio[name=pizzaSize]:checked").val());
-    var crust = parseInt($("input:radio[name=pizzaCrust]:checked").val());
+    var size = $("input:radio[name=pizzaSize]:checked").val();
+    var crust = $("input:radio[name=pizzaCrust]:checked").val();
+    var toppings = [];
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      toppings.push($(this).val());
+    });
+
+    var newPizza = new Pizza(size, crust, toppings);
+
+    $("#name").text(newCustomer.name);
+    $("#address").text(newCustomer.fullAddress());
+    $("#size").text(newPizza.size);
+    $("#crust").text(newPizza.crust);
+    if (toppings.length === 0) {
+      $("#toppings").html("<label>It looks like you don't want any toppings this time.</label>");
+    } else if (toppings.length === 1) {
+      toppings.forEach(function(topping) {
+        $("#toppings").html("<label>On top of your pizza you want " + topping + "  and that's it.</label>");
+      });
+    } else {
+       $("#toppings").html("<label>On top of your pizza you want <span id='toppings2'></span> and that's it.</label>");
+       toppings.forEach(function(topping) {
+         $("#toppings2").append(topping + ", ");
+       });
+    }
+
   });
+  $("")
 
 });
