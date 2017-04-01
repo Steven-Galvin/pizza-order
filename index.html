@@ -237,33 +237,39 @@
         </div>
       </div>
 
-      <div id="confirmationPage">
-        <h4>That's a good looking pizza <span id="name"></span>! Just to make sure, double check to confirm we got all your info correct:</h4>
-        <label>The size of your pizza is <span id="size"></span>.</label>
-        <br>
-        <label>You wanted <span id="crust"></span>.</label>
-        <br>
-        <span id="toppings"></span>
-        <br>
-        <label>Your address is <span id="address"></span>.</label>
-        <br>
-        <p>If it all looks good there is just one more step. Please select if you want delivery or if you want it picked up at our nearest location and hit confirm.</p>
-        <div class="row">
-          <div class="col-md-6">
-            <label>
-              <input type="radio" name="delivery" value="Delivery" checked>
-              Delivery ($1.50)
-            </label>
+      <div class="form-check" id="page3-Confirm">
+        <form>
+          <h4>That's a good looking pizza <span id="name"></span>! Just to make sure, double check to confirm we got all your info correct:</h4>
+          <label>The size of your pizza is <span id="size"></span>.</label>
+          <br>
+          <label>You wanted <span id="crust"></span>.</label>
+          <br>
+          <span id="toppings"></span>
+          <br>
+          <label>Your address is <span id="address"></span>.</label>
+          <br>
+          <p>If it all looks good there is just one more step. Please select if you want delivery or if you want it picked up at our nearest location and hit confirm.</p>
+          <div class="row">
+            <div class="col-md-6">
+              <label>
+                <input type="radio" name="delivery" value="delivery" checked>
+                Delivery
+              </label>
+            </div>
+            <div class="col-md-6">
+              <label>
+                <input type="radio" name="delivery" value="pickup">
+                Pickup
+            </div>
           </div>
-          <div class="col-md-6">
-            <label>
-              <input type="radio" name="delivery" value="Pickup">
-              Pickup (No extra charge)
-            </label>
-          </div>
-        </div>
+          <br>
+          <h5>Your total today will be $<span id="total"></span>.</h5>
+          <button type="submit" class="btn">Confirm</button>
+        </form>
+      </div>
 
-
+      <div id="page4-ThankYou">
+        
       </div>
     </div>
   </body>

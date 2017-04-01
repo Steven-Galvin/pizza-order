@@ -61,7 +61,10 @@ $(document).ready(function() {
     var zipcode = $("#userZipcode").val();
 
     newCustomer = new Customer(name, street, city, state, zipcode);
+    $("#page2-Size-Crust-Toppings").show();
+    $("#page1-Info").hide();
   });
+
   $("div#sizeCrust").submit(function(event) {
     event.preventDefault();
     var size = $("input:radio[name=pizzaSize]:checked").val();
@@ -89,8 +92,15 @@ $(document).ready(function() {
          $("#toppings2").append(topping + ", ");
        });
     }
-
+    $("#total").text(newPizza.totalPrice());
+    $("#page3-Confirm").show();
+    $("#page2-Size-Crust-Toppings").hide();
   });
-  $("")
+
+  $("div#page3-Confirm").submit(function(event) {
+    event.preventDefault();
+    var delivery = $("input:radio[name=delivery]:checked").val();
+    console.log(delivery)
+  });
 
 });
