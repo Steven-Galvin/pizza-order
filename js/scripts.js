@@ -99,8 +99,18 @@ $(document).ready(function() {
 
   $("div#page3-Confirm").submit(function(event) {
     event.preventDefault();
-    var delivery = $("input:radio[name=delivery]:checked").val();
-    console.log(delivery)
+    delivery = $("input:radio[name=delivery]:checked").val();
+    var deliveryNames = ["Ian", "Shawn", "Jessie", "Jose", "Carlos", "Alexis", "Diana", "Trevor", "Monique"]
+    var randomIndex = Math.floor(Math.random()*deliveryNames.length);
+    var randomName = deliveryNames[randomIndex];
+    $("#deliveryName").text(randomName);
+    $("#page4-ThankYou").show();
+    if (delivery === "delivery") {
+      $("#thanksDelivery").show();
+    } else {
+      $("#thanksPickup").show();
+    }
+    $("#page3-Confirm").hide();
   });
 
 });

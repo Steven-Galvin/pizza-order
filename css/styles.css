@@ -1,7 +1,45 @@
+body {
+  background-color: #FFC300;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+label {
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+h4 {
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
 #page2-Size-Crust-Toppings {
   display: none;
 }
 
 #page3-Confirm {
   display: none;
+}
+
+#page4-ThankYou {
+  display: none;
+}
+
+#thanksDelivery {
+  display: none;
+}
+
+#thanksPickup {
+  display: none;
+}
+
+.thankYou {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.jumbotron {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  text-align: center;
+  background-color: rgba(118, 27, 27, 0.9);
+  text-shadow: rgba(255, 195, 0, 0.5) 2px 3px;
 }

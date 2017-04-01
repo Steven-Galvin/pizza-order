@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Ubuntu+Condensed" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.0.js"></script>
@@ -9,15 +10,23 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <h1>Pete Sau's Pizza</h1>
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+          <div class="jumbotron">
+            <h1>Pete Suh Dude's Pizza</h1>
+          </div>
+        </div>
       </div>
 
       <div id="page1-Info">
-        <h4>Personal Info:</h4>
-        <br>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4">
+            <h4>Personal Info:</h4>
+            <br>
             <form id="personalInfo">
               <div class="form-group">
                 <label for="userName">Name:</label>
@@ -269,7 +278,12 @@
       </div>
 
       <div id="page4-ThankYou">
-        
+        <div id="thanksDelivery">
+          <p class="thankYou">Awesome! We've got your Pizza in the oven and <span id="deliveryName"></span> should be there in about 20 minutes. Enjoy!</p>
+        </div>
+        <div id="thanksPickup">
+          <p class="thankYou">Fantastic! The pizza is cooking now and will be ready for pickup in around 15 minutes. Can't wait to see you!</p>
+        </div>
       </div>
     </div>
   </body>
